@@ -1,0 +1,32 @@
+
+
+.dashboard-header {
+    border-bottom: 1px solid #333;
+}
+
+h2 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.user-icon-dropdown {
+    background-color: #fff;
+    border: 1px solid #666;
+    border-radius: 4px;
+    top: 40px;
+    right: 0;
+}
+
+.user-icon-dropdown:hover {
+    color: #fff;
+    background-color: #666;
+}
+
+
+.font-weight-bold {
+    color: #444;
+    font-weight: 600;
+}
+/* .user-icon-dropdown > span:hover {
+    background-color: #666;
+    color: #fff;
+} */
