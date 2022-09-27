@@ -76,20 +76,6 @@ def login_user():
         return jsonify({"error": e}), 500
 
 
-# @app.route('/users', methods=['GET'])
-# def get_all_users():
-
-#    users = User.query.all()
-#    result = []
-#    for user in users:
-#        user_data = {}
-#        user_data['email'] = user.email
-#        user_data['password'] = user.password
-#        user_data['name'] = user.name
-
-#        result.append(user_data)
-#    return jsonify({'users': result})
-
 @app.route('/starttime', methods=['POST'])
 @token_required
 def start_time_input(current_user):
@@ -211,35 +197,3 @@ def get_timesheet(current_user):
         return jsonify({'Timesheet': output})
     except Exception as e:
         return e
-
-# @app.route('/timeinput', methods=['POST'])
-# @token_required
-# def time_input(current_user):
-
-#     data = request.get_json()
-
-#     start_d = datetime.strptime(data['start_date'],"%Y-%m-%dT%H:%M:%S")
-#     end_d = datetime.strptime(data['end_date'],"%Y-%m-%dT%H:%M:%S")
-#     today_date = start_d.date()
-#     new_time = WorkingTime(start_date=start_d, end_date=end_d,
-# current_date=today_date,  user_id=current_user.id)
-#     time_entry = WorkingTime.query.filter_by(
-#     user_id=current_user.id, current_date=today_date).first() is not None
-
-#     if start_d > end_d:
-#         return jsonify(
-# {'message': 'End date can not be prior to start date'})
-
-#     elif time_entry:
-#         print("IF")
-#         exist_update = WorkingTime.query.filter_by(
-# user_id=current_user.id, start_date=start_d).first()
-#         exist_update.start_date = start_d
-#         exist_update.end_date = end_d
-#         db.session.commit()
-#         return jsonify({'message': 'Time entry Updated'})
-#     else:
-#         print("ELSE")
-#         db.session.add(new_time)
-#         db.session.commit()
-#         return jsonify({'message': 'Time entry created'})
