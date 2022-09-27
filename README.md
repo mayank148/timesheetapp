@@ -1,6 +1,6 @@
 # timesheetapp
 
-Author: Mayank Khanna
+Author: Mayank Khanna\
 Mail address: mayank.khanna@atmecs.com
 
 Prerequisites: Python 2.7 and above, NodeJS
