@@ -12,7 +12,7 @@ To run the backend code on windows:
 
 To run frontend code on windows:
 1. Go to the respective directory timesheetapp/frontend.
-2. Run "npm insatll" to install all modules.
+2. Run "npm install" to install all modules.
 3. Run "npm start" to start the frontend application.
 
 Once the application is started, please create a new user for accessing the dashboard.\
